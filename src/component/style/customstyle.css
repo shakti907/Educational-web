@@ -1,0 +1,30 @@
+.titlecentered-col {
+    display: flex;
+    justify-content: center;
+    background-color: #78bdf7;  /* Example background color */
+    height: 100%;  /* Ensure the height is 100% of the parent */
+    align-items: center;
+    text-align: center;
+  }
+  .scrollable-row {
+    max-height: 400px; /* Adjust this height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  /* Styles required only for the example above */
+.scrollspy-notification {
+  position: relative;
+  height: 23rem;
+  overflow: auto;
+  direction: rtl; /* Place scrollbar on the left */
+  text-align: left;
+  padding-left: 0.2rem;
+  scrollbar-width: thin;
+}
+
+.scrollspy-news {
+  position: relative;
+  height: 23rem;
+  overflow: auto;
+  scrollbar-width: thin;
+}
