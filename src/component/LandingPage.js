@@ -78,7 +78,7 @@ export default class LandingPage extends Component {
                 </MDBRow>
                 </header>
                
-                {/* <MDBRow>
+                <MDBRow>
                     <MDBTabs pills justify className='mb-3'>
                         {this.state.tabs.map((e, index) => {
                             return (<MDBTabsItem key={e.name}>
@@ -98,8 +98,8 @@ export default class LandingPage extends Component {
                         })}
 
                     </MDBTabsContent>
-                </MDBRow> */}
-                <Admin/>
+                </MDBRow>
+                {/* <Admin/> */}
                 <MDBFooter className='text-center text-white mt-2' style={{ backgroundColor: '#f1f1f1' }} >
                     <MDBContainer className='pt-2'>
                         <section className='mb-2'>
