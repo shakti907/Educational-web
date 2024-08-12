@@ -92,7 +92,7 @@ export default class AddNews extends Component {
                     </MDBBtnGroup>
                 </MDBRow>
             </MDBCol>
-            <MDBCol md='6'>
+            <MDBCol md='6'> 
                 <MDBRow>
                     {this.state.logoURL && (
                         <header>
