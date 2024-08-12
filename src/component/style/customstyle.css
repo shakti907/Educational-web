@@ -1,22 +1,49 @@
 .titlecentered-col {
-    display: flex;
-    justify-content: center;
-    background-color: #78bdf7;  /* Example background color */
-    height: 100%;  /* Ensure the height is 100% of the parent */
-    align-items: center;
-    text-align: center;
-  }
-  .scrollable-row {
-    max-height: 400px; /* Adjust this height as needed */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-  /* Styles required only for the example above */
+  display: flex;
+  justify-content: center;
+  background-color: #78bdf7;
+  /* Example background color */
+  height: 100%;
+  /* Ensure the height is 100% of the parent */
+  align-items: center;
+  text-align: center;
+  overflow-wrap: break-word; /* Ensures long words break to fit within the container */
+
+}
+
+.header_style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Allows wrapping if needed */
+  padding: 1rem;
+  height: 10rem;
+  margin-right: 2rem
+}
+
+.logoDiv {
+  display: flex;
+  width: 150px;
+  height: 150px
+}
+
+.scrollable-row {
+  max-height: 400px;
+  /* Adjust this height as needed */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
+/* Styles required only for the example above */
 .scrollspy-notification {
   position: relative;
   height: 23rem;
   overflow: auto;
-  direction: rtl; /* Place scrollbar on the left */
+  direction: rtl;
+  /* Place scrollbar on the left */
   text-align: left;
   padding-left: 0.2rem;
   scrollbar-width: thin;
@@ -27,4 +54,55 @@
   height: 23rem;
   overflow: auto;
   scrollbar-width: thin;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .titlecentered-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #78bdf7;
+    /* Example background color */
+    height: 100%;
+    /* Ensure the height is 100% of the parent */
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensures long words break to fit within the container */
+
+  }
+  .titlecentered-col h1, .titlecentered-col h5 {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    overflow-wrap: break-word; /* Break long words */
+    word-break: break-word; /* Break long words */
+    font-size: 1.5rem; /* Adjust font size for better fit */
+  }
+  .header_style {
+    flex-direction: row;
+    height: 7rem;
+    margin-right: 1rem
+  }
+
+  .logoDiv {
+    display: none !important;
+    width: 100px;
+    height: 120px
+  }
+.news,.notification,.cards{
+  margin-left: 1rem;
+}
+  .mdb-tabs {
+    display: block;
+  }
+
+  .mdb-tabs-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .mdb-tabs-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }

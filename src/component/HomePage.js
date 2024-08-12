@@ -13,15 +13,15 @@ export default class HomePage extends Component {
     return (
       <MDBContainer className='p-0'>
         <MDBRow>
-          <MDBCol md='3' className='ml-0'>
+          <MDBCol md='3' className='ml-0 news'>
             <h4>News...</h4>
             <NewsComponent/>
           </MDBCol>
-          <MDBCol md='6'>
+          <MDBCol md='6' className='cards'>
           <h4>About Us...</h4>
             <CardComponent/>
           </MDBCol>
-          <MDBCol md='3'>
+          <MDBCol md='3' className='notification'>
           <h4>Notification...</h4>
             <NotificationComponent/>
           </MDBCol>

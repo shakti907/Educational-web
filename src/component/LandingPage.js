@@ -13,6 +13,7 @@ import { COMPONENT_MAP } from './Constants.js'
 import './style/customstyle.css';
 import Admin from './Admin/Admin.js';
 
+
 export default class LandingPage extends Component {
     constructor() {
         super();
@@ -35,6 +36,7 @@ export default class LandingPage extends Component {
     }
 
     componentDidMount() {
+        debugger
         this.setState({
             tabs: [{
                 name: 'HOME',
@@ -56,6 +58,9 @@ export default class LandingPage extends Component {
                 htmlPage: 'NotificationPage',
                 display: false
             }]
+        },()=>{
+            this.handleJustifyClick("HOME")
+
         })
     }
     render() {
@@ -63,9 +68,9 @@ export default class LandingPage extends Component {
         const ActiveComponent = COMPONENT_MAP[this.state.justifyActive.replaceAll(' ', '_')] || (() => <div>Comming soon...</div>);
         return (
             <MDBContainer fluid className='p-0'>
-                <header>
-                <MDBRow style={{ height: '10rem', marginRight: '2rem' }} >
-                    <MDBCol md='2' className="d-flex justify-content-center align-items-center" >
+                {/* <header> */}
+                <MDBRow className='header_style' >
+                    <MDBCol md='2' className=" justify-content-center align-items-center logoDiv" >
                         <img alt='logo' src={logo} width={this.state.logoWidth} height={this.state.logoHeight}></img>
                     </MDBCol>
                     <MDBCol md='10' className='titlecentered-col'>
@@ -76,7 +81,7 @@ export default class LandingPage extends Component {
                     </MDBCol>
 
                 </MDBRow>
-                </header>
+                {/* </header> */}
                
                 <MDBRow>
                     <MDBTabs pills justify className='mb-3'>
